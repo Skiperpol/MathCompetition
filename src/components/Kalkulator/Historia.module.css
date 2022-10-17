@@ -18,9 +18,13 @@
 .daneHistoria{
     margin-top: 1vh;
     margin-left: 2vw;
-    font-size: 1vw;
+    font-size: 1.3vw;
     color: #0c0a3a;
     font-family: 'Roboto';
     font-weight: 500;
     line-height: 200%;
+}
+
+p{
+    margin: 0px;
 }

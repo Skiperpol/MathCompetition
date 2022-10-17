@@ -7,8 +7,8 @@ export default function Przyciski(parse) {
   const [calc, setCalc] = useState("0");
   const [kropki, setKropki] = useState(0);
 
-  function add(value) {
-    if (calc.length < 50) {
+  function add(value) { 
+    if (String(calc).length < 50) {
       var lastItem = String(calc).slice(-1);
       if (lastItem == "/" || lastItem == "*" || lastItem == "+" || lastItem == "-" || lastItem == "^") {
         setKropki(0)
@@ -26,7 +26,7 @@ export default function Przyciski(parse) {
                 setCalc(String(calc).slice(0, -1) + String(value));
               }
               else {
-                if ((lastItem == "(" && (value != "/" && value != "*" && value != "+" && value != "-" && value != "^")) || lastItem != "(")
+                if ((lastItem == "(" && (value != "/" && value != "*" && value != "+" && value != "^")) || lastItem != "(")
                   setCalc(String(calc) + String(value));
               }
             }
@@ -79,8 +79,9 @@ export default function Przyciski(parse) {
         }
       }
       setCalc(eval(licz))
+      parse.wynik(eval(licz))
     }
-    catch {
+    finally {
       console.log(licz)
       console.log("Błędne dane")
     }
@@ -117,7 +118,7 @@ export default function Przyciski(parse) {
                 <KalkPrzyciskCiemny add={add} text={")"} />
               </td>
               <td>
-                <KalkPrzyciskCiemny add={add} text={"%"} />
+                <KalkPrzyciskCiemny text={"%"} />
               </td>
               <td>
                 <KalkPrzyciskCiemny add={add} text={"/"} />
