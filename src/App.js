@@ -5,9 +5,9 @@ import Kalkulator from './pages/Kalkulator';
 function App() {
   return (
     <div>
-    1234523523
+    1234523523111
       <Routes>
-        <Route exact path='/MathCompetition' element={<Home/>} />
+        <Route exact path={`${process.env.PUBLIC_URL}/`} element={<Home/>} />
         <Route path='MathCompetition/kalkulator' element={<Kalkulator/>} />
       </Routes>
     </div>
