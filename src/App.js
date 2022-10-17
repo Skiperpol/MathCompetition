@@ -7,8 +7,8 @@ function App() {
     <div>
     1234
       <Routes>
-        <Route exact path='Skiperpol.github.io/MathCompetition/' element={<Home/>} />
-        <Route path='Skiperpol.github.io/MathCompetition/kalkulator' element={<Kalkulator/>} />
+        <Route exact path='MathCompetition/' element={<Home/>} />
+        <Route path='MathCompetition/kalkulator' element={<Kalkulator/>} />
       </Routes>
     </div>
   );
