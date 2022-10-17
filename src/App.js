@@ -10,7 +10,6 @@ function App() {
         <Route exact path='/' element={<Home/>} />
         <Route path='MathCompetition/kalkulator' element={<Kalkulator/>} />
         </Routes>
-      {/* </BrowserRouter> */}
     </div>
   );
 }

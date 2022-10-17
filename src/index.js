@@ -11,7 +11,7 @@ import Home from './pages/Home';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Home />
+    <App />
   </BrowserRouter>,
 );
 
