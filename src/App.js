@@ -7,7 +7,7 @@ function App() {
     <div>
     1234
       <Routes>
-        <Route exact path='MathCompetition/' element={<Home/>} />
+        <Route exact path='/MathCompetition/' element={<Home/>} />
         <Route path='MathCompetition/kalkulator' element={<Kalkulator/>} />
       </Routes>
     </div>
