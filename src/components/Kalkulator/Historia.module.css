@@ -1,0 +1,26 @@
+.body{
+    width: 20%;
+    height: 100%;
+    float: right;
+    background-color: RGB(203, 203, 229);
+    border-top-left-radius: 50px;
+}
+
+.titleHistoria{
+    margin-top: 2vh;
+    margin-left: 2vw;
+    font-size: 2.5vw;
+    color: #0c0a3a;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+
+.daneHistoria{
+    margin-top: 1vh;
+    margin-left: 2vw;
+    font-size: 1vw;
+    color: #0c0a3a;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: 200%;
+}

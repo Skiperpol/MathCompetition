@@ -1,0 +1,65 @@
+.nav{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    gap: 5vw;
+}
+li{
+    list-style: none;
+}
+
+.img_logo {
+    max-height: 60px;
+    height: 5vw;
+    padding-left: 4%;
+}
+
+.link_1, .link_2, .link_3{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    position: relative;
+    padding: 0.8vw;
+}
+
+.link_1::before, .link_2::before, .link_3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid;
+    animation: clippath 3s infinite linear;
+}
+
+.link_1::before{
+    visibility: var(--a-visibility_1, visible);
+    border-color: var(--a-border_1, white);
+}
+
+.link_2::before{
+    visibility: var(--a-visibility_2, hidden);
+    border-color: var(--a-border_2, rgb(130, 130, 130));
+}
+
+a:hover::before{
+    visibility: visible;
+}
+
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 95% 0);
+    }
+    25% {
+        clip-path: inset(0 95% 0 0);
+    }
+    50% {
+        clip-path: inset(95% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 95%);
+    }
+}

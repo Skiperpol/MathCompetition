@@ -1,0 +1,14 @@
+.body{
+    width: 80%;
+    height: 45%;
+    float: left;
+    color: white;
+    
+}
+
+.wyswietlanie{
+    width: 95%;
+    text-align: right;
+    font-size: 5vh;
+    margin-top: 6vh;
+}
