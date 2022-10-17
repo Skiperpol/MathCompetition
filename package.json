@@ -2,7 +2,6 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Skiperpol.github.io/MathCompetition",
   "dependencies": {
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.121",
@@ -25,6 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://Skiperpol.github.io/MathCompetition/",
   "eslintConfig": {
     "extends": [
       "react-app",
