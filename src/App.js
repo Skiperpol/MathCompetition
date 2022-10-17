@@ -5,7 +5,7 @@ import Kalkulator from './pages/Kalkulator';
 function App() {
   return (
     <div>
-    12345
+    1234523523
       <Routes>
         <Route exact path='/MathCompetition' element={<Home/>} />
         <Route path='MathCompetition/kalkulator' element={<Kalkulator/>} />
