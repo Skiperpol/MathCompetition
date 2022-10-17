@@ -6,7 +6,6 @@ function App() {
   return (
     <div>
     1234523523
-      {/* <BrowserRouter> */}
       <Routes>
         <Route exact path='/' element={<Home/>} />
         <Route path='MathCompetition/kalkulator' element={<Kalkulator/>} />
