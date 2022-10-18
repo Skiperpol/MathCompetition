@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MathCompetition/static/css/main.2f66005c.css",
-    "main.js": "/MathCompetition/static/js/main.572e427d.js",
+    "main.css": "/MathCompetition/static/css/main.e6e3ddf0.css",
+    "main.js": "/MathCompetition/static/js/main.3bdb10b1.js",
     "static/js/29.9b37e160.chunk.js": "/MathCompetition/static/js/29.9b37e160.chunk.js",
     "static/js/727.08aee57e.chunk.js": "/MathCompetition/static/js/727.08aee57e.chunk.js",
     "static/js/605.0dec10e8.chunk.js": "/MathCompetition/static/js/605.0dec10e8.chunk.js",
@@ -34,7 +34,7 @@
     "index.html": "/MathCompetition/index.html"
   },
   "entrypoints": [
-    "static/css/main.2f66005c.css",
-    "static/js/main.572e427d.js"
+    "static/css/main.e6e3ddf0.css",
+    "static/js/main.3bdb10b1.js"
   ]
 }
