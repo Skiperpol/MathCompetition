@@ -13,3 +13,9 @@
     background-color: #5555B3;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .buttonCiemny{
+        font-size: 5vw;
+    }
+}

@@ -21,10 +21,12 @@ export default function Kalkulator() {
   const [tekst, setTekst] = useState("");
 
   function changeTekst(value){
-    setTemp(value+"\n"+temp)
-    const tem = value+"\n"+temp
-    const odp = String(tem).split('\n').map(str => <p>{str}</p>);
-    setTekst(odp)
+    if(value!="0" && value!="Infinity"){
+      setTemp(value+"\n"+temp)
+      const tem = value+"\n"+temp
+      const odp = String(tem).split('\n').map(str => <p>{str}</p>);
+      setTekst(odp)
+    }
   }
 
 

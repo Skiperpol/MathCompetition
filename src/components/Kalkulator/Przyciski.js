@@ -8,26 +8,34 @@ export default function Przyciski(parse) {
   const [kropki, setKropki] = useState(0);
 
   function add(value) { 
-    if (String(calc).length < 50) {
-      var lastItem = String(calc).slice(-1);
-      if (lastItem == "/" || lastItem == "*" || lastItem == "+" || lastItem == "-" || lastItem == "^") {
+    if(calc=="Infinity"){
+      if(value != "/" && value != "*" && value != "+" && value != "-" && value != "^" && value != "." && value != ")"){
         setKropki(0)
+        setCalc(value)
       }
-      if (((value == "." && kropki == 0) || value != ".")) {
-        if (value != "(" || (value == "(" && (lastItem == "/" || lastItem == "*" || lastItem == "+" || lastItem == "-" || lastItem == "^" || lastItem == "(")) || (value == "(" && lastItem == 0 && String(calc).length == 1)) {
-          if (value == ".")
-            setKropki(kropki + 1)
-          if (String(calc) == 0 && (value != "/" && value != "*" && value != "+" && value != "-" && value != "^")) {
-            setCalc(value)
-          }
-          else {
-            if (value != "." || (lastItem != "/" && lastItem != "*" && lastItem != "+" && lastItem != "-" && lastItem != "^" && lastItem != "(")) {
-              if ((lastItem == "/" || lastItem == "*" || lastItem == "+" || lastItem == "-" || lastItem == "^" || lastItem == ".") && (value == "/" || value == "*" || value == "+" || value == "-" || value == "^")) {
-                setCalc(String(calc).slice(0, -1) + String(value));
-              }
-              else {
-                if ((lastItem == "(" && (value != "/" && value != "*" && value != "+" && value != "^")) || lastItem != "(")
-                  setCalc(String(calc) + String(value));
+    }
+    else{
+      if (String(calc).length < 50) {
+        var lastItem = String(calc).slice(-1);
+        if (lastItem == "/" || lastItem == "*" || lastItem == "+" || lastItem == "-" || lastItem == "^") {
+          setKropki(0)
+        }
+        if (((value == "." && kropki == 0) || value != ".")) {
+          if (value != "(" || (value == "(" && (lastItem == "/" || lastItem == "*" || lastItem == "+" || lastItem == "-" || lastItem == "^" || lastItem == "(")) || (value == "(" && lastItem == 0 && String(calc).length == 1)) {
+            if (value == ".")
+              setKropki(kropki + 1)
+            if (String(calc) == 0 && (value != "/" && value != "*" && value != "+" && value != "-" && value != "^")) {
+              setCalc(value)
+            }
+            else {
+              if (value != "." || (lastItem != "/" && lastItem != "*" && lastItem != "+" && lastItem != "-" && lastItem != "^" && lastItem != "(")) {
+                if ((lastItem == "/" || lastItem == "*" || lastItem == "+" || lastItem == "-" || lastItem == "^" || lastItem == ".") && (value == "/" || value == "*" || value == "+" || value == "-" || value == "^")) {
+                  setCalc(String(calc).slice(0, -1) + String(value));
+                }
+                else {
+                  if ((lastItem == "(" && (value != "/" && value != "*" && value != "+" && value != "^")) || lastItem != "(")
+                    setCalc(String(calc) + String(value));
+                }
               }
             }
           }
@@ -43,14 +51,20 @@ export default function Przyciski(parse) {
 
 
   function backspaceFunc() {
-    var lastItem = String(calc).slice(-1);
-    if (lastItem == ".") {
+    if(calc=="Infinity"){
       setKropki(0)
-    }
-    if (String(calc) != 0 && String(calc).length > 1)
-      setCalc(String(calc).slice(0, -1))
-    else
       setCalc(0)
+    }
+    else{
+      var lastItem = String(calc).slice(-1);
+      if (lastItem == ".") {
+        setKropki(0)
+      }
+      if (String(calc) != 0 && String(calc).length > 1)
+        setCalc(String(calc).slice(0, -1))
+      else
+        setCalc(0)
+    }
   }
 
 
